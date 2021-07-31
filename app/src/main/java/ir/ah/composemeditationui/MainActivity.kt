@@ -13,10 +13,12 @@ import ir.ah.composemeditationui.ui.*
 import ir.ah.composemeditationui.ui.theme.ComposeMeditationUiTheme
 
 class MainActivity : ComponentActivity() {
+    @ExperimentalFoundationApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeMeditationUiTheme {
+                HomeScreen()
 
             }
         }
@@ -28,6 +30,9 @@ class MainActivity : ComponentActivity() {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-      HomeScreen()
+    ComposeMeditationUiTheme {
+        HomeScreen()
+
+    }
 
 }
